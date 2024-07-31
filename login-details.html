@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Details</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Payana.com</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#best">Places</a></li>
+                <li><a href="#package">Package's</a></li>
+                <li><a href="#review">Client's</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <div class="login-details">
+            <div class="head">
+                <h1>Login <span>Details</span></h1>
+            </div>
+            <div id="loginDetails">
+                <p>Email: <span id="displayEmail"></span></p>
+                <p>Password: <span id="displayPassword"></span></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const email = localStorage.getItem('email');
+            const password = localStorage.getItem('password');
+            document.getElementById('displayEmail').textContent = email;
+            document.getElementById('displayPassword').textContent = password;
+        });
+    </script>
+</body>
+</html>
